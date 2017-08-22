@@ -31,4 +31,4 @@ config/*
 # Compiled public folder
 public
 deploy
-build
+dist
