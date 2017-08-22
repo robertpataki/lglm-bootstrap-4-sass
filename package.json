@@ -1,0 +1,9 @@
+{
+  "name": "lglm-bootstrap-4-sass",
+  "version": "0.0.1",
+  "description": "A demo project using Bootstrap 4 SASS grid and related utilities and mixins only (no clutter).",
+  "main": "index.js",
+  "repository": "git@github.com:robertpataki/lglm-bootstrap-4-sass.git",
+  "author": "Rob Pataki",
+  "license": "MIT"
+}
