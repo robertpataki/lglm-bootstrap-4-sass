@@ -5,5 +5,18 @@
   "main": "index.js",
   "repository": "git@github.com:robertpataki/lglm-bootstrap-4-sass.git",
   "author": "Rob Pataki",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "bootstrap": "4.0.0-beta",
+    "express": "^4.15.4",
+    "node-sass": "^4.5.3",
+    "path": "^0.12.7",
+    "rimraf": "^2.6.1"
+  },
+  "scripts": {
+    "css:prebuild": "node-sass src/scss/main.scss dist/css/main.css -r --include-path node_modules/bootstrap/scss",
+    "css:prebuild:watch": "node-sass src/scss/main.scss dist/css/main.css -r -w --include-path node_modules/bootstrap/scss --output-style expanded --source-map-embed",
+    "server": "open http://localhost:3000 && node server.js",
+    "start": "rimraf dist/* && cp -a src/index.html dist/index.html && yarn run css:prebuild && yarn run server | yarn run css:prebuild:watch"
+  }
 }
